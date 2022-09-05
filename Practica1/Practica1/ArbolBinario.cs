@@ -139,7 +139,33 @@ namespace Practica1
 
 		public int contarHojas()
 		{
-			return 0;
+			Cola<ArbolBinario<T>> c = new Cola<ArbolBinario<T>>();
+			ArbolBinario<T> arbolAux;
+			int hoja = 0;
+
+			c.encolar(this);
+			while (!c.esVacia())
+			{
+				arbolAux = c.desencolar();
+
+
+				if (arbolAux.hijoIzquierdo != null)
+				{
+					c.encolar(arbolAux.hijoIzquierdo);
+				}
+				
+				if (arbolAux.hijoDerecho != null)
+				{
+					c.encolar(arbolAux.hijoDerecho);
+				}
+                else
+                {
+                    hoja++;
+                }
+				
+			}
+
+			return hoja;
 		}
 
 		public void recorridoEntreNiveles(int n, int m)

@@ -45,6 +45,8 @@ namespace Practica1
             arbolBinarioA.recorridoPorNiveles();
             Console.WriteLine();
 
+            Console.WriteLine("Cantidad de hojas: "+ arbolBinarioA.contarHojas()) ;
+
             Console.ReadKey();
 
         }

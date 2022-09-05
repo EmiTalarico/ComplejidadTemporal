@@ -29,7 +29,7 @@ namespace Practica1
             Console.WriteLine("\t\t\t\t\t" + arbolBinarioA.getDatoRaiz());
             Console.WriteLine("\t\t\t" + arbolBinarioA.getHijoIzquierdo().getDatoRaiz() + "\t\t\t\t" + arbolBinarioA.getHijoDerecho().getDatoRaiz());
             Console.WriteLine("\t\t" + hijoIzquierdo.getHijoIzquierdo().getDatoRaiz() + "\t\t" + hijoIzquierdo.getHijoDerecho().getDatoRaiz() + "\t\t"
-                              + hijoDerecho.getHijoIzquierdo().getDatoRaiz() + "\t\t" + hijoDerecho.getHijoDerecho().getDatoRaiz()+"\n\n");
+                              + hijoDerecho.getHijoIzquierdo().getDatoRaiz() + "\t\t" + hijoDerecho.getHijoDerecho().getDatoRaiz() + "\n\n");
 
 
             Console.Write("Preorden: ");
@@ -41,9 +41,9 @@ namespace Practica1
             Console.Write("Postorden: ");
             arbolBinarioA.postorden();
             Console.WriteLine();
-            //Console.Write("Por Niveles: ");
-            //arbolBinarioA.recorridoPorNiveles();
-            //Console.WriteLine();
+            Console.Write("Por Niveles: ");
+            arbolBinarioA.recorridoPorNiveles();
+            Console.WriteLine();
 
             Console.ReadKey();
 

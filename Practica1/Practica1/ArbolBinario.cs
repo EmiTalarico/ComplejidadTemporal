@@ -117,11 +117,25 @@ namespace Practica1
 		//la raíz, luego los hijos, los hijos de éstos, etc.
 		public void recorridoPorNiveles()
 		{
-			//Proceso raiz
-            Console.Write(this.dato + " ");
-			//Proceso siguiente nivel
-			
+			Cola<ArbolBinario<T>> c = new Cola<ArbolBinario<T>>();
+			ArbolBinario<T> arbolAux;
+
+			c.encolar(this);
+			while (!c.esVacia())
+			{
+				arbolAux = c.desencolar();
+
+				Console.Write(arbolAux.dato + " ");
+
+				if (arbolAux.hijoIzquierdo != null)
+					c.encolar(arbolAux.hijoIzquierdo);
+
+				if (arbolAux.hijoDerecho != null)
+					c.encolar(arbolAux.hijoDerecho);
+			}
+
 		}
+
 
 		public int contarHojas()
 		{
